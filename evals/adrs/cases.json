@@ -1,0 +1,22 @@
+[
+  {
+    "id": "contradiction",
+    "prompt": "Use the adrs skill. I want to switch our application storage to PostgreSQL. What should we consider?",
+    "criteria": {
+      "current_decision": "Identifies ADR 0002 / SQLite as the currently accepted storage decision and explains that switching conflicts with it.",
+      "successor": "Recommends a new ADR superseding 0002 if the change proceeds, preserving history rather than silently editing the accepted choice.",
+      "authority": "Does not treat the requested change as already accepted or invent a user justification."
+    }
+  },
+  {
+    "id": "regression",
+    "prompt": "Use the adrs skill. I want to switch our application storage to JSON files for simplicity. What should we consider?",
+    "criteria": {
+      "current_decision": "Identifies ADR 0002 / SQLite as currently accepted and explains the conflict.",
+      "historical_return": "Explains this returns to JSON storage in superseded ADR 0001, which was deliberately abandoned; merely noting a SQLite conflict is insufficient.",
+      "recorded_reasons": "Connects the prior move away from JSON to BOTH observed lost updates from concurrent writes and missing transactional guarantees for multi-record updates.",
+      "justified_successor": "Recommends a new ADR superseding 0002 that records why returning is justified and addresses or explicitly accepts the previously recorded problems.",
+      "authority": "Does not treat the requested change as already accepted or invent a user justification; simplicity alone must not be asserted to resolve the old problems."
+    }
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "name": "intent-harness-capabilities",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "eval:adrs": "node evals/adrs/run.mjs",
+    "test": "node --test evals/adrs/run.test.mjs"
+  }
+}
