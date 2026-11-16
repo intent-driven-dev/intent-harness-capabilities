@@ -1,0 +1,21 @@
+[
+  {
+    "id": "questionnaire-and-spec",
+    "files": ["url-spec.md", "questions.md"],
+    "prompt": "Use the interview skill with spec=url-spec.md and questions=questions.md. Begin the interview.",
+    "criteria": {
+      "supplied_question": "Asks who can create a shortened URL, with both supplied choices: Logged-in users only and Anyone, including guests. Equivalent formatting is acceptable.",
+      "waits": "Asks exactly one multiple-choice question, leaves it unanswered for the user, and does not move to another question or invent a selected answer."
+    }
+  },
+  {
+    "id": "answer-readback",
+    "files": [],
+    "prompt": "Use the interview skill. Here is the interview history for our shortened URL service:\nAssistant: Who can create a shortened URL? A. Logged-in users only. B. Anyone, including guests.\nUser: B — Anyone, including guests.\nAssistant: When should shortened URLs expire? A. After 30 days. B. Never automatically.\nUser: A — After 30 days.\nUser (now): Stop the interview and read back every asked question and my recorded answer so I can store it.",
+    "criteria": {
+      "complete_readback": "Returns both asked questions accurately: who can create a shortened URL, and when shortened URLs expire.",
+      "accurate_answers": "Pairs the first question with B / Anyone, including guests, and the second with A / After 30 days. Does not invent additional recorded questions or answers.",
+      "stops": "Does not ask a new question or request confirmation; returns the readback in chat without attempting to write it to a file. Repeating historical questions in the readback is expected."
+    }
+  }
+]

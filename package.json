@@ -6,6 +6,7 @@
   },
   "scripts": {
     "eval:adrs": "node evals/adrs/run.mjs",
-    "test": "node --test evals/adrs/run.test.mjs"
+    "eval:interview": "node evals/interview/run.mjs",
+    "test": "node --test evals/*/run.test.mjs"
   }
 }
