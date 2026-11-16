@@ -7,6 +7,7 @@
   "scripts": {
     "eval:adrs": "node evals/adrs/run.mjs",
     "eval:interview": "node evals/interview/run.mjs",
-    "test": "node --test evals/*/run.test.mjs"
+    "test": "node --test evals/*/run.test.mjs",
+    "eval:glossary": "node evals/glossary/run.mjs"
   }
 }

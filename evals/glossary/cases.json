@@ -1,0 +1,13 @@
+[
+  {
+    "id": "default-location",
+    "files": [
+      "docs/glossary/domain.md"
+    ],
+    "prompt": "Use the glossary skill to draft a 50-word change proposal for a URL shortener. Allow users to create shortened URLs, require that each short URL exists, has not expired, and remains available for redirection, and require that its target URL is valid and reachable. Return only the proposal.",
+    "criteria": {
+      "meaning": "Clearly proposes allowing users to create shortened URLs. Uses the glossary terms to convey the required link existence, non-expiration and redirection availability, and target validity and reachability, without contradicting these definitions.",
+      "compression": "Uses both glossary terms in meaningful requirements instead of repeating their full definitions or adding a glossary explanation."
+    }
+  }
+]
